@@ -1,0 +1,12 @@
+[Unit]
+Description=Hibernate system when battery reaches 5%
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/battery-hibernate.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
